@@ -777,3 +777,219 @@ input[type="range"]::-webkit-slider-thumb {
     font-weight: 700;
     text-align: center;
 }
+/* ================= PROFILE PAGE ================= */
+
+/* ================= PROFILE REDESIGN ================= */
+
+.profile-page {
+  max-width: 1000px;
+}
+
+/* HERO */
+.profile-hero {
+  background: linear-gradient(135deg, var(--primary), var(--primary2));
+  border-radius: 22px;
+  padding: 40px 20px;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 25px 60px rgba(47,127,123,.45);
+}
+
+.profile-avatar-lg {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 28px;
+  margin: auto;
+  margin-bottom: 14px;
+  backdrop-filter: blur(6px);
+}
+
+/* INFO CARDS */
+.profile-info-card {
+  background: rgba(255,255,255,.85);
+  backdrop-filter: blur(10px);
+  border-radius: 18px;
+  padding: 22px;
+  height: 100%;
+  border: 1px solid rgba(36,59,59,.12);
+  box-shadow: 0 14px 30px rgba(0,0,0,.08);
+}
+
+.profile-info-card h5 {
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+/* SELF CARE */
+.profile-section h4 {
+  font-weight: 900;
+}
+
+.selfcare-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+@media (max-width: 992px) {
+  .selfcare-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .selfcare-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.selfcare-card {
+  background: linear-gradient(180deg, #ffffff, #eaf3f3);
+  border-radius: 18px;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid rgba(36,59,59,.12);
+  transition: .3s;
+}
+
+.selfcare-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(47,127,123,.25);
+}
+
+.selfcare-card i {
+  font-size: 28px;
+  color: var(--primary);
+}
+
+.selfcare-card h6 {
+  font-weight: 800;
+  margin-top: 10px;
+}
+
+/* DISCLAIMER */
+.profile-disclaimer {
+  background: rgba(36,59,59,.06);
+  border: 1px solid rgba(36,59,59,.12);
+  border-radius: 16px;
+  padding: 18px;
+  font-size: 13px;
+  color: #4d6b6b;
+}
+/* Extra breathing space at bottom */
+.profile-page {
+  padding-bottom: 80px;
+}
+.profile-page::after {
+  content: "";
+  display: block;
+  height: 60px;
+}
+.profile-avatar-lg {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.profile-avatar-lg i {
+  font-size: 42px;
+  color: white;
+}
+
+.profile-hero {
+  background: linear-gradient(135deg, #2f7f7b, #3fa9a4);
+  border-radius: 22px;
+  padding: 48px 20px;
+  color: white;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.18);
+}
+/* PROFILE HERO FIX */
+.profile-avatar-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-avatar-lg {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ffffff55, #ffffff22);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.25);
+  backdrop-filter: blur(6px);
+}
+
+.profile-avatar-lg i {
+  font-size: 38px;
+  color: white;
+}
+
+.profile-tagline {
+  font-size: 14px;
+  opacity: 0.9;
+  margin-bottom: 6px;
+}
+
+.profile-stats {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.stat-pill {
+  background: rgba(255,255,255,0.18);
+  border: 1px solid rgba(255,255,255,0.25);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+/* PROFILE INFO CARDS (About You / Why MindBridge) */
+.profile-info-card {
+    background: linear-gradient(180deg, #ffffff, #eef6f6);
+    border-radius: 18px;
+    padding: 22px;
+    border: 1px solid rgba(36, 59, 59, 0.12);
+    box-shadow: 0 12px 26px rgba(0, 0, 0, 0.08);
+    transition: all 0.25s ease;
+}
+
+.profile-info-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 36px rgba(0, 0, 0, 0.12);
+}
+
+.profile-info-card h5 {
+    font-weight: 900;
+    margin-bottom: 10px;
+    color: var(--dark);
+}
+
+.profile-info-card p {
+    color: #4d6b6b;
+    line-height: 1.7;
+    font-size: 14.5px;
+}
+.profile-info-card:hover h5 {
+    letter-spacing: 0.3px;
+}

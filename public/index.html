@@ -514,13 +514,96 @@
 
 
   <!-- ================= PROFILE PAGE (placeholder) ================= -->
-  <section id="profilePage" class="container d-none mt-4">
-    <div class="card p-4">
-      <h5>My Profile</h5>
-      <p><strong>Name:</strong> <span id="profileName">-</span></p>
-      <p><strong>Email:</strong> <span id="profileEmail">-</span></p>
+ <section id="profilePage" class="container d-none mt-4 profile-page">
+
+  <!-- HERO -->
+  <div class="profile-hero mb-5">
+    <div class="profile-hero-content text-center">
+
+      <div class="profile-avatar-wrap">
+        <div class="profile-avatar-lg">
+          <i class="bi bi-heart-pulse"></i>
+        </div>
+
+        <h3 id="profileName">User</h3>
+        <p class="profile-tagline">
+          Your personal mental wellness space
+        </p>
+      </div>
+
     </div>
-  </section>
+  </div>
+
+  <!-- INFO CARDS -->
+  <div class="row g-4 mb-5">
+
+    <div class="col-md-6">
+      <div class="profile-info-card h-100">
+        <h5>🌱 About You</h5>
+        <p>
+          This space helps you reflect on your emotional well-being.
+          Regular check-ins can help you notice patterns and improve self-awareness.
+        </p>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="profile-info-card h-100">
+        <h5>🧠 Why MindBridge?</h5>
+        <p>
+          MindBridge is designed to promote healthy mental habits through
+          self-reflection, tracking, and awareness.
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- SELF CARE -->
+  <div class="profile-section mb-5">
+    <h4 class="mb-4">Self-Care Suggestions</h4>
+
+    <div class="selfcare-grid">
+
+      <div class="selfcare-card">
+        <i class="bi bi-wind"></i>
+        <h6>Breathing</h6>
+        <p>Slow breathing helps calm your nervous system.</p>
+      </div>
+
+      <div class="selfcare-card">
+        <i class="bi bi-journal-text"></i>
+        <h6>Journaling</h6>
+        <p>Write down one thought before sleeping.</p>
+      </div>
+
+      <div class="selfcare-card">
+        <i class="bi bi-person-walking"></i>
+        <h6>Movement</h6>
+        <p>Light movement boosts mood and energy.</p>
+      </div>
+
+      <div class="selfcare-card">
+        <i class="bi bi-moon-stars"></i>
+        <h6>Rest</h6>
+        <p>Consistent sleep improves emotional balance.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- DISCLAIMER -->
+  <div class="profile-disclaimer mt-5 mb-5">
+    <strong>⚠ Disclaimer</strong>
+    <p class="mb-0">
+      MindBridge is an educational mental wellness tool and does not replace
+      professional medical advice or diagnosis.
+    </p>
+  </div>
+
+</section>
+
+
 
   <!-- ================= FORCED DAILY CHECK-IN MODAL ================= -->
   <div class="modal fade" id="dailyCheckinModal" data-bs-backdrop="static" data-bs-keyboard="false">
