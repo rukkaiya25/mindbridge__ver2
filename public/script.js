@@ -310,3 +310,34 @@ window.resetPassword = resetPassword;
 window.logout = logout;
 window.togglePassword = togglePassword;
 window.submitCheckin = submitCheckin;
+
+/* ===================== SCREENING ===================== */
+
+function submitScreening() {
+    const form = document.getElementById("screeningForm");
+    const resultBox = document.getElementById("screeningResult");
+
+    let score = 0;
+
+    for (let i = 1; i <= 7; i++) {
+        const q = form.querySelector(`input[name="q${i}"]:checked`);
+        if (!q) {
+            alert("Please answer all questions.");
+            return;
+        }
+        score += parseInt(q.value);
+    }
+
+    let message = "";
+
+    if (score <= 6) {
+        message = "🌱 Your responses suggest low distress levels. Keep maintaining healthy habits.";
+    } else if (score <= 13) {
+        message = "💛 You may be experiencing moderate stress. Small self-care steps could help.";
+    } else {
+        message = "🧠 Your responses suggest higher stress levels. Reaching out for support may be beneficial.";
+    }
+
+    resultBox.innerText = message;
+    resultBox.classList.remove("d-none");
+}
