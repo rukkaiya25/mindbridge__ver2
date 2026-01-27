@@ -993,3 +993,62 @@ input[type="range"]::-webkit-slider-thumb {
 .profile-info-card:hover h5 {
     letter-spacing: 0.3px;
 }
+/* ================= FOOTER (REFINED) ================= */
+
+.soft-footer {
+  margin-top: 70px;
+  padding: 50px 20px 36px;
+  background: linear-gradient(
+    135deg,
+    #2f7f7b,
+    #3fa9a4
+  );
+  border-radius: 32px 32px 0 0;
+}
+
+.soft-footer-inner {
+  max-width: 720px;
+  margin: auto;
+  text-align: center;
+  color: #ffffff;
+}
+
+.footer-brand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.footer-brand i {
+  font-size: 22px;
+  opacity: 0.95;
+}
+
+.footer-message {
+  margin: 18px auto 22px;
+  font-size: 15px;
+  line-height: 1.7;
+  max-width: 520px;
+  opacity: 0.95;
+}
+
+.footer-reminders {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  font-size: 13px;
+  opacity: 0.9;
+  margin-bottom: 24px;
+}
+
+.footer-meta {
+  font-size: 12px;
+  opacity: 0.8;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
