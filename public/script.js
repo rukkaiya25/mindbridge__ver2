@@ -226,6 +226,13 @@ async function loadTodayValues() {
     el("moodValue").innerText = latest.mood ?? "–";
     el("energyValue").innerText = latest.energy ?? "–";
     el("sleepValue").innerText = latest.sleep ?? "–";
+    handleMoodSuggestion(
+    latest.mood,
+    latest.energy,
+    latest.sleep,
+    latest.stress
+);
+
 }
 
 /* ===================== CHART ===================== */
@@ -312,6 +319,23 @@ window.togglePassword = togglePassword;
 window.submitCheckin = submitCheckin;
 
 /* ===================== SCREENING ===================== */
+function handleMoodSuggestion(mood, energy, sleep, stress) {
+    const btn = document.getElementById("takeTestBtn");
+    if (!btn) return;
+
+    const needsTest =
+        (mood !== null && mood <= 4) ||
+        (energy !== null && energy <= 4) ||
+        (sleep !== null && sleep <= 4) ||
+        (stress !== null && stress >= 7);
+
+    if (needsTest) {
+        btn.classList.remove("d-none");
+        btn.innerText = "Not feeling your best? Take a quick test 💙";
+    } else {
+        btn.classList.add("d-none");
+    }
+}
 
 function submitScreening() {
     const form = document.getElementById("screeningForm");
