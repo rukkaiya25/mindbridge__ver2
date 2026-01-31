@@ -23,7 +23,7 @@
 
       <div class="ms-auto d-flex gap-3 nav-links">
         <span onclick="showDashboard(); return false;">Dashboard</span>
-        <span onclick="showScreening(); return false;">Screening Test</span>
+        
         <span onclick="showProfile(); return false;">My Profile</span>
         <span onclick="logout(); return false;">Logout</span>
       </div>
@@ -412,6 +412,10 @@
   <section id="dashboardPage" class="dashboard d-none">
     <h2>Today’s Status</h2>
     <p id="todayStatus" class="text-muted">No check-in yet</p>
+    <button class="btn btn-primary mt-3" onclick="showScreening()">
+  Take a Test
+</button>
+
 
     <div class="cards">
       <div class="stat-card">
