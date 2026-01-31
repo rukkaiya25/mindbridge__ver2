@@ -415,102 +415,102 @@
 
   <!-- ================= SCREENING PAGE (placeholder) ================= -->
   <!-- ================= SCREENING PAGE ================= -->
-<section id="screeningPage" class="container d-none screening-page">
+  <section id="screeningPage" class="container d-none screening-page">
 
-  <div class="screening-card">
+    <div class="screening-card">
 
-    <div class="screening-header">
-      <span class="screening-badge">Mental wellness screening</span>
-      <h3>How have you been feeling lately?</h3>
-      <p>
-        Answer honestly based on how you’ve felt over the <strong>past 2 weeks</strong>.
-        There are no right or wrong answers.
-      </p>
+      <div class="screening-header">
+        <span class="screening-badge">Mental wellness screening</span>
+        <h3>How have you been feeling lately?</h3>
+        <p>
+          Answer honestly based on how you’ve felt over the <strong>past 2 weeks</strong>.
+          There are no right or wrong answers.
+        </p>
+      </div>
+
+      <form id="screeningForm">
+
+        <!-- QUESTION TEMPLATE -->
+        <div class="screening-question">
+          <p>1. I feel overwhelmed by daily responsibilities.</p>
+          <div class="screening-scale">
+            <label><input type="radio" name="q1" value="0">Never</label>
+            <label><input type="radio" name="q1" value="1">Sometimes</label>
+            <label><input type="radio" name="q1" value="2">Often</label>
+            <label><input type="radio" name="q1" value="3">Almost always</label>
+          </div>
+        </div>
+
+        <div class="screening-question">
+          <p>2. I find it hard to relax or unwind.</p>
+          <div class="screening-scale">
+            <label><input type="radio" name="q2" value="0">Never</label>
+            <label><input type="radio" name="q2" value="1">Sometimes</label>
+            <label><input type="radio" name="q2" value="2">Often</label>
+            <label><input type="radio" name="q2" value="3">Almost always</label>
+          </div>
+        </div>
+
+        <div class="screening-question">
+          <p>3. I feel motivated to complete my daily tasks.</p>
+          <div class="screening-scale">
+            <label><input type="radio" name="q3" value="0">Always</label>
+            <label><input type="radio" name="q3" value="1">Often</label>
+            <label><input type="radio" name="q3" value="2">Rarely</label>
+            <label><input type="radio" name="q3" value="3">Never</label>
+          </div>
+        </div>
+
+        <div class="screening-question">
+          <p>4. I feel anxious or worried without a clear reason.</p>
+          <div class="screening-scale">
+            <label><input type="radio" name="q4" value="0">Never</label>
+            <label><input type="radio" name="q4" value="1">Sometimes</label>
+            <label><input type="radio" name="q4" value="2">Often</label>
+            <label><input type="radio" name="q4" value="3">Almost always</label>
+          </div>
+        </div>
+
+        <div class="screening-question">
+          <p>5. I feel positive about my future.</p>
+          <div class="screening-scale">
+            <label><input type="radio" name="q5" value="0">Always</label>
+            <label><input type="radio" name="q5" value="1">Often</label>
+            <label><input type="radio" name="q5" value="2">Rarely</label>
+            <label><input type="radio" name="q5" value="3">Never</label>
+          </div>
+        </div>
+
+        <div class="screening-question">
+          <p>6. I have trouble concentrating on tasks.</p>
+          <div class="screening-scale">
+            <label><input type="radio" name="q6" value="0">Never</label>
+            <label><input type="radio" name="q6" value="1">Sometimes</label>
+            <label><input type="radio" name="q6" value="2">Often</label>
+            <label><input type="radio" name="q6" value="3">Almost always</label>
+          </div>
+        </div>
+
+        <div class="screening-question">
+          <p>7. I feel emotionally supported by people around me.</p>
+          <div class="screening-scale">
+            <label><input type="radio" name="q7" value="0">Always</label>
+            <label><input type="radio" name="q7" value="1">Often</label>
+            <label><input type="radio" name="q7" value="2">Rarely</label>
+            <label><input type="radio" name="q7" value="3">Never</label>
+          </div>
+        </div>
+
+        <button type="button" class="btn btn-primary w-100 mt-4" onclick="submitScreening()">
+          Submit screening
+        </button>
+
+      </form>
+
+      <div id="screeningResult" class="screening-result d-none"></div>
+
     </div>
-
-    <form id="screeningForm">
-
-      <!-- QUESTION TEMPLATE -->
-      <div class="screening-question">
-        <p>1. I feel overwhelmed by daily responsibilities.</p>
-        <div class="screening-scale">
-          <label><input type="radio" name="q1" value="0">Never</label>
-          <label><input type="radio" name="q1" value="1">Sometimes</label>
-          <label><input type="radio" name="q1" value="2">Often</label>
-          <label><input type="radio" name="q1" value="3">Almost always</label>
-        </div>
-      </div>
-
-      <div class="screening-question">
-        <p>2. I find it hard to relax or unwind.</p>
-        <div class="screening-scale">
-          <label><input type="radio" name="q2" value="0">Never</label>
-          <label><input type="radio" name="q2" value="1">Sometimes</label>
-          <label><input type="radio" name="q2" value="2">Often</label>
-          <label><input type="radio" name="q2" value="3">Almost always</label>
-        </div>
-      </div>
-
-      <div class="screening-question">
-        <p>3. I feel motivated to complete my daily tasks.</p>
-        <div class="screening-scale">
-          <label><input type="radio" name="q3" value="0">Always</label>
-          <label><input type="radio" name="q3" value="1">Often</label>
-          <label><input type="radio" name="q3" value="2">Rarely</label>
-          <label><input type="radio" name="q3" value="3">Never</label>
-        </div>
-      </div>
-
-      <div class="screening-question">
-        <p>4. I feel anxious or worried without a clear reason.</p>
-        <div class="screening-scale">
-          <label><input type="radio" name="q4" value="0">Never</label>
-          <label><input type="radio" name="q4" value="1">Sometimes</label>
-          <label><input type="radio" name="q4" value="2">Often</label>
-          <label><input type="radio" name="q4" value="3">Almost always</label>
-        </div>
-      </div>
-
-      <div class="screening-question">
-        <p>5. I feel positive about my future.</p>
-        <div class="screening-scale">
-          <label><input type="radio" name="q5" value="0">Always</label>
-          <label><input type="radio" name="q5" value="1">Often</label>
-          <label><input type="radio" name="q5" value="2">Rarely</label>
-          <label><input type="radio" name="q5" value="3">Never</label>
-        </div>
-      </div>
-
-      <div class="screening-question">
-        <p>6. I have trouble concentrating on tasks.</p>
-        <div class="screening-scale">
-          <label><input type="radio" name="q6" value="0">Never</label>
-          <label><input type="radio" name="q6" value="1">Sometimes</label>
-          <label><input type="radio" name="q6" value="2">Often</label>
-          <label><input type="radio" name="q6" value="3">Almost always</label>
-        </div>
-      </div>
-
-      <div class="screening-question">
-        <p>7. I feel emotionally supported by people around me.</p>
-        <div class="screening-scale">
-          <label><input type="radio" name="q7" value="0">Always</label>
-          <label><input type="radio" name="q7" value="1">Often</label>
-          <label><input type="radio" name="q7" value="2">Rarely</label>
-          <label><input type="radio" name="q7" value="3">Never</label>
-        </div>
-      </div>
-
-      <button type="button" class="btn btn-primary w-100 mt-4" onclick="submitScreening()">
-        Submit screening
-      </button>
-
-    </form>
-
-    <div id="screeningResult" class="screening-result d-none"></div>
-
-  </div>
-</section>
+  </section>
 
 
   <!-- ================= PROFILE PAGE (placeholder) ================= -->
